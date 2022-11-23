@@ -1,0 +1,26 @@
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Sidebar from './components/Sidebar'
+
+import Home from './pages/Home';
+import Team from './pages/Team';
+import Tasks from './pages/Tasks';
+
+
+const App: React.FunctionComponent = () => {
+  return (
+    <>
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/team' element={<Team />} />            
+          <Route path='/tasks' element={<Tasks />} />    
+        </Routes>
+      </Router> 
+    </>
+  )
+}
+
+export default App
